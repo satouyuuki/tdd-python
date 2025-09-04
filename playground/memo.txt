@@ -1,0 +1,16 @@
+AttributeError: partially initialized module 'unittest' has no attribute 'TestCase' (most likely due to a circular import)
+ファイル名はstandard libraryのパッケージ名と違う名前にしないと名前衝突が起きる
+
+無理やりタイプエラーを起こしてる
+No overloads for "split" match the provided arguments (Pyright reportCallIssue)
+
+
+satoyuki@satoyukinoMacBook-Air playground % /usr/bin/python3 my_unittest.py -v
+test_isupper (__main__.TestStringMethods) ... ok
+test_split (__main__.TestStringMethods) ... ok
+test_upper (__main__.TestStringMethods) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
