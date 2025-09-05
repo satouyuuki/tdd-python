@@ -1,0 +1,29 @@
+
+satoyuki@satoyukinoMacBook-Air playground % /usr/bin/python3 my_unittest.py -v
+test_isupper (__main__.TestStringMethods) ... ok
+test_split (__main__.TestStringMethods) ... ok
+test_upper (__main__.TestStringMethods) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+
+satoyuki@satoyukinoMacBook-Air playground % /usr/bin/python3 -m unittest my_unittest
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+satoyuki@satoyukinoMacBook-Air playground % /usr/bin/python3 -m unittest my_unittest.TestStringMethods
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+satoyuki@satoyukinoMacBook-Air playground % /usr/bin/python3 -m unittest my_unittest.TestStringMethods.test_isupper
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK

@@ -4,13 +4,9 @@ AttributeError: partially initialized module 'unittest' has no attribute 'TestCa
 無理やりタイプエラーを起こしてる
 No overloads for "split" match the provided arguments (Pyright reportCallIssue)
 
+テストメソッドはtest_から始める
 
-satoyuki@satoyukinoMacBook-Air playground % /usr/bin/python3 my_unittest.py -v
-test_isupper (__main__.TestStringMethods) ... ok
-test_split (__main__.TestStringMethods) ... ok
-test_upper (__main__.TestStringMethods) ... ok
+もしsetUp()に成功したら、テストメソッドが成功するかどうかに関わらずtearDown()は呼ばれる
 
-----------------------------------------------------------------------
-Ran 3 tests in 0.000s
-
-OK
+pythonのファイル名はモジュール名。その中身を使いたい時はfrom module import targetのように使う
+そうじゃない時はimport moduleのようにし、使う時はmodule.targetのように使う
