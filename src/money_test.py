@@ -11,4 +11,5 @@ class MoneyTest(unittest.TestCase):
 
     def testEquality(self):
         self.assertTrue(Doller(5).equals(Doller(5)))
+        self.assertFalse(Doller(5).equals(Doller(6)))
 
