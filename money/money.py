@@ -13,12 +13,12 @@ class Money(ABC):
     @staticmethod
     def doller(amount: int) -> 'Money':
         from .doller import Doller
-        return Doller(amount)
+        return Doller(amount, "USD")
 
     @staticmethod
     def franc(amount: int) -> 'Money':
         from .franc import Franc
-        return Franc(amount)
+        return Franc(amount, "CHF")
 
     @abstractmethod
     def times(self, multiplier: int) -> 'Money':

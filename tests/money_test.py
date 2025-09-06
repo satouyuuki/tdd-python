@@ -1,7 +1,6 @@
 import unittest
 import sys
 sys.path.append('..')
-from money.franc import Franc
 from money.money import Money
 
 class MoneyTest(unittest.TestCase):
@@ -18,7 +17,7 @@ class MoneyTest(unittest.TestCase):
         self.assertFalse(Money.franc(5).__eq__(Money.doller(5)))
 
     def testFrancMultiplication(self):
-        five: Franc = Franc(5)
+        five: Money = Money.franc(5)
         self.assertEqual(Money.franc(10), five.times(2))
         self.assertEqual(Money.franc(15), five.times(3))
 

@@ -1,8 +1,8 @@
 from .money import Money
 
 class Franc(Money):
-    def __init__(self, amount: int) -> None:
-        super().__init__(amount=amount, currency="CHF")
+    def __init__(self, amount: int, currency: str) -> None:
+        super().__init__(amount=amount, currency=currency)
 
     def times(self, multiplier: int) -> 'Money':
-        return Franc(self._amount * multiplier)
+        return Money.franc(self._amount * multiplier)
