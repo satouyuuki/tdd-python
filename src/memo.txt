@@ -1,0 +1,5 @@
+vimでunittestをするにはこれをする
+:!/usr/bin/python3 -m unittest %
+
+vimでデバッグをするにはこれをする
+import pdb; pdb.set_trace()
