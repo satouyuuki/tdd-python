@@ -20,3 +20,5 @@ times()がDollerクラスを返すのがわかりにくい->
 amountがクラスの中に閉じ込められたのでprivateにできる
 
 TDDの本ではこれでもテストが通っていたのでjavaのequals()はpythonでは__eq__なのだとわかった
+
+Javaは同一のクラスであれば別インスタンスのprivateフィールドにアクセスできる。
