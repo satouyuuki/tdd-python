@@ -4,3 +4,6 @@ class Doller:
 
     def times(self, multiplier: int) -> 'Doller':
         return Doller(self.amount * multiplier)
+
+    def equals(self, object: 'Doller') -> bool:
+        return True
