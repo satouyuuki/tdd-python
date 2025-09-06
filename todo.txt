@@ -3,4 +3,6 @@
 - amountをprivateにする
 - ~~Dollerの副作用どうする？~~
 - Moneyの丸処理どうする？
+- equals()
+- hashCode()
 

@@ -5,3 +5,7 @@ vimでデバッグをするにはこれをする
 import pdb; pdb.set_trace()
 
 pythonのclassはnullableなclassではないのでnullを返すのはいけない
+
+value objectはequals()を実装しなければならない
+Dollerオブジェクトをハッシュテーブルのキーとして使うならhashcodeを使わないといけない
+dict = {"en": "Hello", "fr": "Bonjour"}として宣言し、print(dict["idx1"])のようにアクセスする
