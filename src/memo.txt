@@ -3,3 +3,5 @@ vimでunittestをするにはこれをする
 
 vimでデバッグをするにはこれをする
 import pdb; pdb.set_trace()
+
+pythonのclassはnullableなclassではないのでnullを返すのはいけない
