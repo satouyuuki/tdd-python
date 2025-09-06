@@ -14,3 +14,9 @@ dict = {"en": "Hello", "fr": "Bonjour"}として宣言し、print(dict["idx1"])�
 
 x==yはx.__eq__(y)が呼ばれる
 修正するにはクラスで実装する必要がある
+
+times()がDollerクラスを返すのがわかりにくい->
+10をDoller(10)に変更
+amountがクラスの中に閉じ込められたのでprivateにできる
+
+TDDの本ではこれでもテストが通っていたのでjavaのequals()はpythonでは__eq__なのだとわかった

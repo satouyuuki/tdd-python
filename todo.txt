@@ -3,6 +3,8 @@
 - amountをprivateにする
 - ~~Dollerの副作用どうする？~~
 - Moneyの丸処理どうする？
-- equals()
+- ~~equals()~~
 - hashCode()
+- nullとの等価性比較
+- 他のオブジェクトとの等価性比較
 
