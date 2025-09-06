@@ -1,10 +1,14 @@
 - $5 + 10 CHF = $10 (レートが2:1の場合)
 - ~~$5 * 2 = $10~~
-- amountをprivateにする
+- ~~amountをprivateにする~~
 - ~~Dollerの副作用どうする？~~
 - Moneyの丸処理どうする？
 - ~~equals()~~
 - hashCode()
 - nullとの等価性比較
 - 他のオブジェクトとの等価性比較
+- ~~5 CHF * 2 = 10 CHF~~
+- DollerとFrancの重複
+- equalsの一般化
+- timesの一般化
 
