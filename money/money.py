@@ -14,6 +14,11 @@ class Money(ABC):
         from .doller import Doller
         return Doller(amount)
 
+    @staticmethod
+    def franc(amount: int) -> 'Money':
+        from .franc import Franc
+        return Franc(amount)
+
     @abstractmethod
     def times(self, multiplier: int) -> 'Money':
         pass
