@@ -1,6 +1,7 @@
 import unittest
 import sys
 sys.path.append('..')
+from money.franc import Franc
 from money.money import Money
 
 class MoneyTest(unittest.TestCase):
@@ -24,3 +25,6 @@ class MoneyTest(unittest.TestCase):
     def testCurrency(self):
         self.assertEqual("USD", Money.doller(1).currency())
         self.assertEqual("CHF", Money.franc(1).currency())
+
+    def testDifferentClassEquality(self):
+        self.assertTrue(Money(10, "CHF"), Franc(10, "CHF"))

@@ -1,14 +1,24 @@
-from abc import ABC, abstractmethod
-
-class Money(ABC):
+class Money:
     def __init__(self, amount: int, currency: str) -> None:
         self._amount = amount
         self._currency = currency
 
+    def times(self, multiplier: int) -> 'Money':
+        return Money(self._amount * multiplier, self._currency)
+
+    def currency(self) -> str:
+        return self._currency
+
     def __eq__(self, obj: object) -> bool:
         if not isinstance(obj, Money):
             return False
-        return self._amount == obj._amount and self.__class__.__name__.__eq__(obj.__class__.__name__)
+        return self._amount == obj._amount and self._currency == obj._currency
+
+    # str()はどういう時に使う?
+    # def __str__(self) -> str:
+    # toString()の等価
+    def __repr__(self) -> str:
+        return f"Money(amount='{self._amount}', currency='{self._currency}')"
 
     @staticmethod
     def doller(amount: int) -> 'Money':
@@ -19,11 +29,3 @@ class Money(ABC):
     def franc(amount: int) -> 'Money':
         from .franc import Franc
         return Franc(amount, "CHF")
-
-    @abstractmethod
-    def times(self, multiplier: int) -> 'Money':
-        pass
-
-    def currency(self) -> str:
-        return self._currency
-
