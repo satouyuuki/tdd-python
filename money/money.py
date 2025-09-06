@@ -22,3 +22,8 @@ class Money(ABC):
     @abstractmethod
     def times(self, multiplier: int) -> 'Money':
         pass
+
+    @abstractmethod
+    def currency(self) -> str:
+        pass
+
