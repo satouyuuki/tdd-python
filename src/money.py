@@ -5,5 +5,7 @@ class Doller:
     def times(self, multiplier: int) -> 'Doller':
         return Doller(self.amount * multiplier)
 
-    def equals(self, object: 'Doller') -> bool:
-        return True
+    def equals(self, obj: object) -> bool:
+        if not isinstance(obj, Doller):
+            return False
+        return self.amount == obj.amount
