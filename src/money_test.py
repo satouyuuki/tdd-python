@@ -8,6 +8,6 @@ class MoneyTest(unittest.TestCase):
         self.assertEqual(Doller(15), five.times(3))
 
     def testEquality(self):
-        self.assertTrue(Doller(5).equals(Doller(5)))
-        self.assertFalse(Doller(5).equals(Doller(6)))
+        self.assertTrue(Doller(5).__eq__(Doller(5)))
+        self.assertFalse(Doller(5).__eq__(Doller(6)))
 
