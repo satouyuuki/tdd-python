@@ -1,8 +1,9 @@
 from abc import ABC, abstractmethod
 
 class Money(ABC):
-    def __init__(self, amount: int) -> None:
+    def __init__(self, amount: int, currency: str) -> None:
         self._amount = amount
+        self._currency = currency
 
     def __eq__(self, obj: object) -> bool:
         if not isinstance(obj, Money):
@@ -23,7 +24,6 @@ class Money(ABC):
     def times(self, multiplier: int) -> 'Money':
         pass
 
-    @abstractmethod
     def currency(self) -> str:
-        pass
+        return self._currency
 
