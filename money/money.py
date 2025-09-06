@@ -1,4 +1,6 @@
-class Money:
+from abc import ABC, abstractmethod
+
+class Money(ABC):
     def __init__(self, amount: int) -> None:
         self._amount = amount
 
@@ -6,3 +8,12 @@ class Money:
         if not isinstance(obj, Money):
             return False
         return self._amount == obj._amount and self.__class__.__name__.__eq__(obj.__class__.__name__)
+
+    @staticmethod
+    def doller(amount: int) -> 'Money':
+        from .doller import Doller
+        return Doller(amount)
+
+    @abstractmethod
+    def times(self, multiplier: int) -> 'Money':
+        pass

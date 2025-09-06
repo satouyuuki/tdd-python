@@ -27,3 +27,9 @@ PYTHONPATHがあればModuleNotFoundError: No module named 'x'のエラーが解
 
 :tabe hoge.pyで新しいファイルを作って
 :tabcでそのファイルを消すことができる
+
+times()を共通化するためにFactoryMethodを作る?
+
+package, moduleが同じだと循環importとなるみたい?
+ImportError: cannot import name 'Money' from partially initialized module 'money.money' (most likely due to a circular import) (/Users/satoyuki/Project/python/tdd-python/tests/../money/money.py)
+循環参照をなくすためにimportのいちを工夫して呼び出される時にした
