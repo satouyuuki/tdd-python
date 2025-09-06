@@ -15,6 +15,7 @@ class MoneyTest(unittest.TestCase):
         self.assertFalse(Doller(5).__eq__(Doller(6)))
         self.assertTrue(Franc(5).__eq__(Franc(5)))
         self.assertFalse(Franc(5).__eq__(Franc(6)))
+        self.assertFalse(Franc(5).__eq__(Doller(5)))
 
     def testFrancMultiplication(self):
         five: Franc = Franc(5)
