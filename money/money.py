@@ -5,4 +5,4 @@ class Money:
     def __eq__(self, obj: object) -> bool:
         if not isinstance(obj, Money):
             return False
-        return self._amount == obj._amount
+        return self._amount == obj._amount and self.__class__.__name__.__eq__(obj.__class__.__name__)

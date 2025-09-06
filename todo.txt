@@ -11,4 +11,5 @@
 - DollerとFrancの重複
 - equalsの一般化
 - timesの一般化
-- FrancとDollerを比較する
+- ~~FrancとDollerを比較する~~
+- 通貨の概念
