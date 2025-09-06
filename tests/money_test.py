@@ -1,12 +1,8 @@
 import unittest
 import sys
 sys.path.append('..')
-from money.money import Money
 from money.doller import Doller
 from money.franc import Franc
-
-# from doller import Doller
-# from franc import Franc
 
 class MoneyTest(unittest.TestCase):
     def testMultiplication(self):
