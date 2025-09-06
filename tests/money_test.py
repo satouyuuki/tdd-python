@@ -21,3 +21,7 @@ class MoneyTest(unittest.TestCase):
         five: Franc = Franc(5)
         self.assertEqual(Money.franc(10), five.times(2))
         self.assertEqual(Money.franc(15), five.times(3))
+
+    def testCurrency(self):
+        self.assertEqual("USD", Money.doller(1).currency())
+        self.assertEqual("CHF", Money.franc(1).currency())
