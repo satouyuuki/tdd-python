@@ -1,4 +1,4 @@
-from money import Money
+from .money import Money
 
 class Doller(Money):
     def times(self, multiplier: int) -> 'Doller':
