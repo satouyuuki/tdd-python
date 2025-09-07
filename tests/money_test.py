@@ -5,6 +5,7 @@ sys.path.append('..')
 from money.money import Money
 from money.expression import Expression
 from money.bank import Bank
+from money.sum import Sum
 
 class MoneyTest(unittest.TestCase):
     def testMultiplication(self):
