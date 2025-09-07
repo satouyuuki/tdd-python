@@ -25,10 +25,12 @@ class TestCase:
 class WasRun(TestCase):
     def setUp(self):
         self.log = "setUp "
-    def tearDown(self):
-        self.log += "tearDown "
     def testMethod(self):
         self.log += "testMethod "
+    def testBrokenMethod(self):
+        raise Exception
+    def tearDown(self):
+        self.log += "tearDown "
 
 class TestCaseTest(TestCase):
     def testTemplateMethod(self):
@@ -46,4 +48,4 @@ class TestCaseTest(TestCase):
 
 TestCaseTest("testTemplateMethod").run()
 TestCaseTest("testResult").run()
-TestCaseTest("testFailedResult").run()
+#TestCaseTest("testFailedResult").run()
