@@ -6,6 +6,9 @@ class Money:
     def times(self, multiplier: int) -> 'Money':
         return Money(self._amount * multiplier, self._currency)
 
+    def plus(self, addend: 'Money') -> 'Money':
+        return Money(self._amount + addend._amount, self._currency)
+
     def currency(self) -> str:
         return self._currency
 
