@@ -20,8 +20,11 @@ class TestCase:
         result = TestResult()
         result.testStarted()
         self.setUp()
-        method = getattr(self, self.name)
-        method()
+        try:
+            method = getattr(self, self.name)
+            method()
+        except:
+            result.testFailed()
         self.tearDown()
         return result
 
@@ -56,5 +59,5 @@ class TestCaseTest(TestCase):
 
 TestCaseTest("testTemplateMethod").run()
 TestCaseTest("testResult").run()
-#TestCaseTest("testFailedResult").run()
+TestCaseTest("testFailedResult").run()
 TestCaseTest("testFailedResultFormatting").run()
