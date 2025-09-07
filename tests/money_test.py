@@ -52,3 +52,6 @@ class MoneyTest(unittest.TestCase):
         bank.addRate("CHF", "USD", 2)
         result: Money = bank.reduce(Money.franc(2), "USD")
         self.assertEqual(Money.doller(1), result)
+
+    def testArrayEquals(self):
+        self.assertEqual(["abc"], ["abc"])
