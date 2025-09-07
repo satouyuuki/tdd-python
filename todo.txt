@@ -8,6 +8,8 @@
 - hashCode()
 - nullとの等価性比較
 - 他のオブジェクトとの等価性比較
+- Sum.plus
+- Expression.times
 
 - ~~$5 * 2 = $10~~
 - ~~amountをprivateにする~~
