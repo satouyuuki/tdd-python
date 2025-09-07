@@ -1,4 +1,5 @@
 from .expression import Expression
+from .bank import Bank
 
 class Money(Expression):
     def __init__(self, amount: int, currency: str) -> None:
@@ -15,8 +16,8 @@ class Money(Expression):
     def currency(self) -> str:
         return self._currency
 
-    def reduce(self, to: str) -> 'Money':
-        rate: int =  2 if (self.currency() == "CHF" and to == "USD") else 1
+    def reduce(self, bank: Bank, to: str) -> 'Money':
+        rate: int =  bank.rate(self._currency, to)
         return Money(int(self._amount / rate), to)
 
     def __eq__(self, obj: object) -> bool:
