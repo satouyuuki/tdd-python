@@ -1,5 +1,6 @@
 from typing import cast
 
+# bankクラスでしか使わない内部クラスだからbankクラスに閉じ込めても良いかもしれない
 class Pair:
     def __init__(self, frm: str, to: str) -> None:
         self._frm = frm
