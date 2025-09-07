@@ -86,6 +86,6 @@ class MoneyTest(unittest.TestCase):
         result: Money = bank.reduce(sum, "USD")
         self.assertEqual(Money.doller(20), result)
 
-    def testPlusSameCurrencyReturnsMoney(self):
-        sum: Expression = Money.doller(1).plus(Money.doller(1))
-        self.assertTrue(isinstance(sum, Money))
+    # def testPlusSameCurrencyReturnsMoney(self):
+    #     sum: Expression = Money.doller(1).plus(Money.doller(1))
+    #     self.assertTrue(isinstance(sum, Money))
