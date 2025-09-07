@@ -53,5 +53,9 @@ class MoneyTest(unittest.TestCase):
         result: Money = bank.reduce(Money.franc(2), "USD")
         self.assertEqual(Money.doller(1), result)
 
-    def testArrayEquals(self):
-        self.assertEqual(["abc"], ["abc"])
+    # もしかするとpythonではlist, dictをハッシュテーブルのキーに使うことができるかもしれない
+    # def testArrayEquals(self):
+    #     self.assertEqual(["abc"], ["abc"])
+
+    def testIdentityTest(self):
+        self.assertEqual(1, Bank().rate("USD", "USD"))
