@@ -15,6 +15,9 @@ class Money(Expression):
     def currency(self) -> str:
         return self._currency
 
+    def reduce(self, to: str) -> 'Money':
+        return self
+
     def __eq__(self, obj: object) -> bool:
         if not isinstance(obj, Money):
             return False
