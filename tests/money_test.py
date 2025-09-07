@@ -1,4 +1,5 @@
 import unittest
+from typing import cast
 import sys
 sys.path.append('..')
 from money.money import Money
@@ -26,3 +27,10 @@ class MoneyTest(unittest.TestCase):
         bank: Bank = Bank()
         reduced: Money = bank.reduce(sum, "USD")
         self.assertEqual(Money.doller(10), reduced);
+
+    def testPlusReturnsSum(self):
+        five: Money = Money.doller(5)
+        result: Expression = five.plus(five)
+        sum: Sum = cast(Sum, result)
+        self.assertEqual(five, sum.augend)
+        self.assertEqual(five, sum.addend)
