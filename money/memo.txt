@@ -36,3 +36,6 @@ ImportError: cannot import name 'Money' from partially initialized module 'money
 
 # type: ignoreを使えばコンパイルを通すためにreturn Noneをすることができる
 https://typing.python.org/en/latest/spec/directives.html#type-ignore-comments
+
+三項演算子はある
+https://docs.python.org/3.9/reference/expressions.html#conditional-expressions

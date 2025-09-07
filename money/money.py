@@ -16,7 +16,8 @@ class Money(Expression):
         return self._currency
 
     def reduce(self, to: str) -> 'Money':
-        return self
+        rate: int =  2 if (self.currency() == "CHF" and to == "USD") else 1
+        return Money(int(self._amount / rate), to)
 
     def __eq__(self, obj: object) -> bool:
         if not isinstance(obj, Money):
