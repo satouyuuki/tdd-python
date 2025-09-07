@@ -2,6 +2,8 @@ import unittest
 import sys
 sys.path.append('..')
 from money.money import Money
+from money.expression import Expression
+from money.bank import Bank
 
 class MoneyTest(unittest.TestCase):
     def testMultiplication(self):
