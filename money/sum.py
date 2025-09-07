@@ -12,4 +12,4 @@ class Sum(Expression):
         return Money(amount, to)
 
     def plus(self, addend: Expression) -> 'Expression':
-        return None # type: ignore
+        return Sum(self, addend)
