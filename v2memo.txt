@@ -1,1 +1,4 @@
 pythonのクラスは上から順に読まれるから、クラスで使うものは上の方に書く必要がある
+
+printfスタイルの文字列フォーマット
+https://docs.python.org/3.9/library/stdtypes.html#printf-style-string-formatting
